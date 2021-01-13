@@ -52,6 +52,6 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public void deleteReservation(String reservationId) {
-
+        reservationRepository.deleteById(reservationId);
     }
 }
