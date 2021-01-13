@@ -22,5 +22,4 @@ public class ReservationEntity {
     private LocalDateTime reservationTime;
     private int numberOfGuests;
     private int duration;
-
 }
