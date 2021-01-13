@@ -1,5 +1,6 @@
 package com.rms.reservationservice.entity;
 
+import com.rms.reservationservice.model.Reservation;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -22,4 +23,15 @@ public class ReservationEntity {
     private LocalDateTime reservationTime;
     private int numberOfGuests;
     private int duration;
+
+    public static ReservationEntity from(Reservation reservation) {
+        return ReservationEntity.builder()
+                .id(reservation.getId())
+                .firstName(reservation.getFirstName())
+                .lastName(reservation.getLastName())
+                .reservationTime(reservation.getReservationTime())
+                .numberOfGuests(reservation.getNumberOfGuests())
+                .duration(reservation.getDuration())
+                .build();
+    }
 }
