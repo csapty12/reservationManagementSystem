@@ -46,7 +46,8 @@ public class ReservationServiceImpl implements ReservationService {
 
     @Override
     public Reservation updateReservation(String reservationId, Reservation reservation) {
-        return null;
+        Reservation reservationWithId = reservation.toBuilder().id(reservationId).build();
+        return saveReservation(reservationWithId);
     }
 
     @Override
