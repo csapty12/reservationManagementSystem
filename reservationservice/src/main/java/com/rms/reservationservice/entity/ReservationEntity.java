@@ -21,5 +21,6 @@ public class ReservationEntity {
     private String lastName;
     private LocalDateTime reservationTime;
     private int numberOfGuests;
+    private int duration;
 
 }
