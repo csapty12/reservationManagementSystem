@@ -19,4 +19,10 @@ public class ReservationController {
     public Reservation save(@RequestBody Reservation reservation) {
         return reservationService.saveReservation(reservation);
     }
+
+    @GetMapping("/{reservationId}")
+    @ResponseStatus(HttpStatus.OK)
+    public Reservation get(@PathVariable("reservationId") String reservationId) {
+        return reservationService.getReservationById(reservationId);
+    }
 }
